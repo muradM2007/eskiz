@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>Sevgi Dünyası</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .page {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            transition: 0.7s;
+        }
+
+        #page1 {
+            background: linear-gradient(to right, pink, red);
+            color: white;
+        }
+
+        #page2 {
+            background: black;
+            color: pink;
+            transform: translateX(100%);
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+            color: red;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ffe6e6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1-ci ekran -->
+<div id="page1" class="page">
+    <h1>Sevgi Dünyasına Xoş Gəlmisən ❤️</h1>
+    <p>Sevgi həyatın ən gözəl hissidir...</p>
+    <button onclick="basla()">Başla</button>
+</div>
+
+<!-- 2-ci ekran -->
+<div id="page2" class="page">
+    <h1>Sevgi hər şeydir 💖</h1>
+    <p>Sən mənim ən gözəl hekayəmsən...</p>
+</div>
+
+<script>
+    function basla() {
+        document.getElementById("page1").style.transform = "translateX(-100%)";
+        document.getElementById("page2").style.transform = "translateX(0)";
+    }
+</script>
+
+</body>
+</html>
